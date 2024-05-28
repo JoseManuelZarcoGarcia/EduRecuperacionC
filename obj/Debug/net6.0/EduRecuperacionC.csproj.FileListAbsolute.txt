@@ -1,0 +1,14 @@
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\bin\Debug\net6.0\EduRecuperacionC.exe
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\bin\Debug\net6.0\EduRecuperacionC.deps.json
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\bin\Debug\net6.0\EduRecuperacionC.runtimeconfig.json
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\bin\Debug\net6.0\EduRecuperacionC.dll
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\bin\Debug\net6.0\EduRecuperacionC.pdb
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\obj\Debug\net6.0\EduRecuperacionC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\obj\Debug\net6.0\EduRecuperacionC.AssemblyInfoInputs.cache
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\obj\Debug\net6.0\EduRecuperacionC.AssemblyInfo.cs
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\obj\Debug\net6.0\EduRecuperacionC.csproj.CoreCompileInputs.cache
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\obj\Debug\net6.0\EduRecuperacionC.dll
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\obj\Debug\net6.0\refint\EduRecuperacionC.dll
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\obj\Debug\net6.0\EduRecuperacionC.pdb
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\obj\Debug\net6.0\EduRecuperacionC.genruntimeconfig.cache
+C:\Users\csi22-jzarcia\source\repos\EduRecuperacionC\obj\Debug\net6.0\ref\EduRecuperacionC.dll
