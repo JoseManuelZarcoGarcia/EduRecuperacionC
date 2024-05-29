@@ -12,7 +12,7 @@ namespace EduRecuperacionC.Servicios
 
         public void altaAlumno()
         {
-            try
+            do
             {
                 AlumnoDto nuevoAlumno = new AlumnoDto();
 
@@ -40,14 +40,38 @@ namespace EduRecuperacionC.Servicios
                 nuevoAlumno.Email = Console.ReadLine();
 
                 Controladores.Program.listaAlumnos.Add(nuevoAlumno);
-            }
-            catch (Exception ex)
+            } while (Controladores.Program.listaAlumnos.Count<3);
+        }
+
+
+        public void bajaAlumno()
+        {
+            string salirBajaAlumno = "n";
+            do
             {
+                Console.WriteLine("Indique el dni del alumno a borrar ");
+                string dniPedido = Console.ReadLine();
+                AlumnoDto alumnoABorrar = new AlumnoDto();
 
-            }
-            finally { }
+                foreach(AlumnoDto alumno in Controladores.Program.listaAlumnos)
+                {
+                    if (alumno.Dni.Equals(dniPedido))
+                    {
+                        alumnoABorrar = alumno;
+                        break;
+                    }
+                }
+                /* borramos al alumno fuera del bucle foreach xq si hay 4 alumnos y borramos el 3,
+                * el 4 pasa a ser el 3 y el bucle da error al buscar el 4. 
+                * esto pasa xq el foreach tine un controlador que nosotros no controlamos
+                */
+                Controladores.Program.listaAlumnos.Remove(alumnoABorrar);
 
-           
+                Console.WriteLine("Si quiere seguir borrando alumnos escriba s ");
+                salirBajaAlumno = Console.ReadLine();
+
+            } while (salirBajaAlumno=="s");
+
         }
 
     }

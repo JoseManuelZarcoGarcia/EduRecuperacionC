@@ -32,6 +32,18 @@ namespace EduRecuperacionC.Dtos
         //Constructores
         //public AlumnoDto() { }
 
+        override
+        public string ToString()
+        {
+            string listado = string.Concat(this.Dni, " - ", this.Nombre);
+            return listado;
+        }
+
+        public string ToString(char caracterSeparacion)
+        {
+            string listadoAlumnoGuardadoFichero = string.Concat(this.Dni,caracterSeparacion,this.Nombre);
+            return listadoAlumnoGuardadoFichero;
+        }
 
     }
 }

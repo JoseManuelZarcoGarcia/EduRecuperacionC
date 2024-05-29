@@ -12,5 +12,7 @@ namespace EduRecuperacionC.Servicios
 
         public void altaAlumno();
 
+        public void bajaAlumno();
+
     }
 }

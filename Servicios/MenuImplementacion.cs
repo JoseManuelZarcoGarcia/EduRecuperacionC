@@ -8,30 +8,20 @@ namespace EduRecuperacionC.Servicios
 {
     internal class MenuImplementacion : MenuInterfaz
     {
-        FicheroInterfaz fi = new FicheroImplementacion();
         public int mostrarMenu()
         {
             int opcionSeleccionada = default;
-            try
-            {
-                Console.WriteLine("-----------------");
-                Console.WriteLine("0. Cerrar Menu");
-                Console.WriteLine("1. Alta de objito");
-                Console.WriteLine(string.Concat("-----------------", "\n"));
-                opcionSeleccionada = Convert.ToInt32(Console.ReadLine());
 
-                return opcionSeleccionada;
-            }
-            catch (Exception ex)
-            {
-                fi.escribirFicheroLog("Error");
-                throw;
-            }
-            finally
-            {
-                
-            }
-            
+            Console.WriteLine("-----------------");
+            Console.WriteLine("0. Cerrar Menu");
+            Console.WriteLine("1. Alta de objito");
+            Console.WriteLine("2. baja de alumno");
+            Console.WriteLine("3. listado de alumnos");
+            Console.WriteLine("4. listado de alumnos en fichero");
+            Console.WriteLine(string.Concat("-----------------", "\n"));
+            opcionSeleccionada = Convert.ToInt32(Console.ReadLine());
+
+            return opcionSeleccionada;
         }
 
     }

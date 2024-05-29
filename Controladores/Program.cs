@@ -24,12 +24,13 @@ namespace EduRecuperacionC.Controladores
             AlumnoInterfaz al = new AlumnoImplementacion();
             bool cerrarMenu = true;
             int opcionSeleccionada;
+            string ficheroListadoAlumnos = "C:\\Users\\csi22-jzarcia\\source\\repos\\ficheroListadoAlumnos\\patata.txt";
 
             do
             {
                 try
                 {
-
+                    // dni - nombre
                     opcionSeleccionada = mi.mostrarMenu();
                     switch (opcionSeleccionada)
                     {
@@ -40,6 +41,21 @@ namespace EduRecuperacionC.Controladores
                         case 1:
                             al.altaAlumno();
                             fi.escribirFicheroLog("se ha seleccionado alta de objeto");
+                            break;
+                        case 2:
+                            al.bajaAlumno();
+                            fi.escribirFicheroLog("se ha seleccionada baja de alumno");
+                            break;
+                        case 3:
+                            foreach (AlumnoDto alumno in listaAlumnos)
+                            {
+                               Console.WriteLine(alumno.ToString());
+                            }
+                            fi.escribirFicheroLog("se ha seleccionada listado de alumnos");
+                            break;
+                        case 4:
+                            fi.escribirFicheroListadoAlumnos(ficheroListadoAlumnos);
+                            fi.escribirFicheroLog("se ha seleccionada baja de alumno");
                             break;
                         default:
                             Console.WriteLine("El valor dado no es valido");
