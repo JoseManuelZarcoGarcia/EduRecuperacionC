@@ -17,6 +17,7 @@ namespace EduRecuperacionC.Dtos
             private string direccion = "aaa";
             private long telefono = 999999999;
             private string email = "aaa";
+            private DateTime fechaNacimiento = DateTime.Now;
 
         //Getter and Setter
 
@@ -28,6 +29,7 @@ namespace EduRecuperacionC.Dtos
         public string Direccion { get => direccion; set => direccion = value; }
         public long Telefono { get => telefono; set => telefono = value; }
         public string Email { get => email; set => email = value; }
+        public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
 
         //Constructores
         //public AlumnoDto() { }
@@ -41,7 +43,7 @@ namespace EduRecuperacionC.Dtos
 
         public string ToString(char caracterSeparacion)
         {
-            string listadoAlumnoGuardadoFichero = string.Concat(this.Dni,caracterSeparacion,this.Nombre);
+            string listadoAlumnoGuardadoFichero = string.Concat(this.IdAlumno,caracterSeparacion,this.Nombre, caracterSeparacion, this.Apellido1, caracterSeparacion, this.Apellido2, caracterSeparacion, this.Dni, caracterSeparacion, this.Direccion, caracterSeparacion, this.Telefono, caracterSeparacion, this.Email, caracterSeparacion, this.FechaNacimiento);
             return listadoAlumnoGuardadoFichero;
         }
 

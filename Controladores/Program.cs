@@ -25,6 +25,7 @@ namespace EduRecuperacionC.Controladores
             bool cerrarMenu = true;
             int opcionSeleccionada;
             string ficheroListadoAlumnos = "C:\\Users\\csi22-jzarcia\\source\\repos\\ficheroListadoAlumnos\\patata.txt";
+            fi.cargaInicial(ficheroListadoAlumnos);
 
             do
             {
@@ -57,11 +58,18 @@ namespace EduRecuperacionC.Controladores
                             fi.escribirFicheroListadoAlumnos(ficheroListadoAlumnos);
                             fi.escribirFicheroLog("se ha seleccionada baja de alumno");
                             break;
+                        case 5:
+                            al.modificarCampoAlumno();
+                            fi.escribirFicheroLog("se ha seleccionada modificar");
+                            break;
+
+
                         default:
                             Console.WriteLine("El valor dado no es valido");
                             fi.escribirFicheroLog("se ha seleccionado una opcion no valida");
                             break;
                     }
+                    fi.escribirFicheroListadoAlumnos(ficheroListadoAlumnos);
 
                 }
                 catch (Exception ex)

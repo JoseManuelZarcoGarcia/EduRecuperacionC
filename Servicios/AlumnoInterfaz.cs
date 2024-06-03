@@ -14,5 +14,7 @@ namespace EduRecuperacionC.Servicios
 
         public void bajaAlumno();
 
+        public void modificarCampoAlumno();
+
     }
 }

@@ -9,6 +9,7 @@ namespace EduRecuperacionC.Servicios
 {
     internal class AlumnoImplementacion : AlumnoInterfaz
     {
+        MenuInterfaz mi = new MenuImplementacion();
 
         public void altaAlumno()
         {
@@ -38,6 +39,9 @@ namespace EduRecuperacionC.Servicios
 
                 Console.WriteLine("Escriba su email");
                 nuevoAlumno.Email = Console.ReadLine();
+
+                Console.WriteLine("Escriba su fecha de nacimiento");
+                nuevoAlumno.FechaNacimiento = Convert.ToDateTime(Console.ReadLine());
 
                 Controladores.Program.listaAlumnos.Add(nuevoAlumno);
             } while (Controladores.Program.listaAlumnos.Count<3);
@@ -71,6 +75,79 @@ namespace EduRecuperacionC.Servicios
                 salirBajaAlumno = Console.ReadLine();
 
             } while (salirBajaAlumno=="s");
+
+        }
+
+        public void modificarCampoAlumno()
+        {
+            Console.WriteLine("escriba el dni a buscar");
+            string dniValidador = Console.ReadLine();
+            bool cerrarMenu2 = true;
+            AlumnoDto alumnoBuscado = new AlumnoDto();
+            foreach(AlumnoDto alumno in Controladores.Program.listaAlumnos)
+            {
+                for(int i = 0; alumno.Dni.Equals(dniValidador); i++)
+                {
+                    alumnoBuscado = alumno;
+                }
+            }
+
+            do
+            {
+                int nuevaOpcionSeleccionada = mi.menuModificarCampoAlumno();
+                switch (nuevaOpcionSeleccionada)
+                {
+                    case 0:
+                        cerrarMenu2 = false;
+                        break;
+                    case 1:
+                        Console.WriteLine("-----------------");
+                        Console.WriteLine("Escriba el nombre");
+                        Console.WriteLine("-----------------");
+                        alumnoBuscado.Nombre = Console.ReadLine();
+
+                        break;
+                    case 2:
+                        Console.WriteLine("-----------------");
+                        Console.WriteLine("Escriba el apellido1");
+                        Console.WriteLine("-----------------");
+                        alumnoBuscado.Apellido1 = Console.ReadLine();
+                        break;
+                    case 3:
+                        Console.WriteLine("-----------------");
+                        Console.WriteLine("Escriba el apellido2");
+                        Console.WriteLine("-----------------");
+                        alumnoBuscado.Apellido2 = Console.ReadLine();
+                        break;
+                    case 4:
+                        Console.WriteLine("-----------------");
+                        Console.WriteLine("Escriba la direccion");
+                        Console.WriteLine("-----------------");
+                        alumnoBuscado.Direccion= Console.ReadLine();
+                        break;
+                    case 5:
+                        Console.WriteLine("-----------------");
+                        Console.WriteLine("Escriba el telefon");
+                        Console.WriteLine("-----------------");
+                        alumnoBuscado.Telefono= Convert.ToInt64(Console.ReadLine());
+                        break;
+                    case 6:
+                        Console.WriteLine("-----------------");
+                        Console.WriteLine("Escriba el email");
+                        Console.WriteLine("-----------------");
+                        alumnoBuscado.Email = Console.ReadLine();
+                        break;
+                    case 7:
+                        Console.WriteLine("-----------------");
+                        Console.WriteLine("Escriba la fecha de nacimiento");
+                        Console.WriteLine("-----------------");
+                        alumnoBuscado.FechaNacimiento= Convert.ToDateTime(Console.ReadLine());
+                        break;
+                    default:
+                        break;
+                }
+            } while (!cerrarMenu2);
+            
 
         }
 

@@ -11,5 +11,7 @@ namespace EduRecuperacionC.Servicios
 
         public int mostrarMenu();
 
+        public int menuModificarCampoAlumno();
+
     }
 }
