@@ -44,8 +44,10 @@ namespace EduRecuperacionC.Servicios
                 nuevoAlumno.FechaNacimiento = Convert.ToDateTime(Console.ReadLine());
 
                 Controladores.Program.listaAlumnos.Add(nuevoAlumno);
+
             } while (Controladores.Program.listaAlumnos.Count<3);
         }
+
 
 
         public void bajaAlumno()
@@ -86,20 +88,20 @@ namespace EduRecuperacionC.Servicios
             AlumnoDto alumnoBuscado = new AlumnoDto();
             foreach(AlumnoDto alumno in Controladores.Program.listaAlumnos)
             {
-                for(int i = 0; alumno.Dni.Equals(dniValidador); i++)
+
+                if(alumno.Dni.Equals(dniValidador))
                 {
                     alumnoBuscado = alumno;
+                    Console.WriteLine(alumno.Dni.ToString());
                 }
             }
 
+            string respuesta = "n";
             do
             {
                 int nuevaOpcionSeleccionada = mi.menuModificarCampoAlumno();
                 switch (nuevaOpcionSeleccionada)
                 {
-                    case 0:
-                        cerrarMenu2 = false;
-                        break;
                     case 1:
                         Console.WriteLine("-----------------");
                         Console.WriteLine("Escriba el nombre");
@@ -146,7 +148,12 @@ namespace EduRecuperacionC.Servicios
                     default:
                         break;
                 }
-            } while (!cerrarMenu2);
+
+                Console.WriteLine("si quiere seguir cambiando pulse s");
+                respuesta = Console.ReadLine();
+                
+
+            } while (respuesta == "s");
             
 
         }

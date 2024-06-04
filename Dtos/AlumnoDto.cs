@@ -43,7 +43,10 @@ namespace EduRecuperacionC.Dtos
 
         public string ToString(char caracterSeparacion)
         {
-            string listadoAlumnoGuardadoFichero = string.Concat(this.IdAlumno,caracterSeparacion,this.Nombre, caracterSeparacion, this.Apellido1, caracterSeparacion, this.Apellido2, caracterSeparacion, this.Dni, caracterSeparacion, this.Direccion, caracterSeparacion, this.Telefono, caracterSeparacion, this.Email, caracterSeparacion, this.FechaNacimiento);
+            string listadoAlumnoGuardadoFichero = string.Concat(this.IdAlumno,caracterSeparacion,this.Nombre, caracterSeparacion,
+                this.Apellido1, caracterSeparacion, this.Apellido2, caracterSeparacion, this.Dni,
+                caracterSeparacion, this.Direccion, caracterSeparacion, this.Telefono, caracterSeparacion,
+                this.Email, caracterSeparacion, this.FechaNacimiento.ToString("yyyy/MM/dd"));
             return listadoAlumnoGuardadoFichero;
         }
 

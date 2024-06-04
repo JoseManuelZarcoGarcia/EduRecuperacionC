@@ -30,7 +30,6 @@ namespace EduRecuperacionC.Servicios
             int opcionSeleccionada = default;
 
             Console.WriteLine("-----------------");
-            Console.WriteLine("0. Cerrar Menu");
             Console.WriteLine("1. nombre");
             Console.WriteLine("2. apellido1");
             Console.WriteLine("3. apellido2");
