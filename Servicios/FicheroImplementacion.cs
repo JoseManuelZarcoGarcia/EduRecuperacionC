@@ -18,11 +18,13 @@ namespace EduRecuperacionC.Servicios
                 using (sw = new StreamWriter(Controladores.Program.rutaFicheroLog, true))
                 {
                     sw.WriteLine(mensaje);
+                    //sw.Close();
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Console.WriteLine("error al escribir en fichero log");
             }
             finally
             {
